@@ -1,0 +1,20 @@
+{
+    "name": "arcade-sprite-data",
+    "dependencies": {
+        "device": "*"
+    },
+    "files": [
+        "CODE_OF_CONDUCT.md",
+        "README.md",
+        "SECURITY.md",
+        "main.blocks",
+        "main.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "blocksprj"
+}
