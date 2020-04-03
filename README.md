@@ -1,3 +1,48 @@
+---
+title: Manual
+---
+
+> Open this page at [https://microsoft.github.io/arcade-sprite-data/](https://microsoft.github.io/arcade-sprite-data/)
+
+## Usage
+
+This extensions adds block to store and read data 
+in sprites. The blocks are added to the bottom of the **sprites** toolbox.
+
+* Storing numbers
+
+```blocks
+let mySprite = sprites.create(sprites.food.smallApple, SpriteKind.Player)
+sprites.setDataNumber(mySprite, "life", 3)
+sprites.changeDataNumberBy(mySprite, "life", -1)
+let life = sprites.readDataNumber(mySprite, "life")
+```
+
+* Storing strings
+
+```blocks
+let mySprite = sprites.create(sprites.food.smallApple, SpriteKind.Player)
+sprites.setDataString(mySprite, "name", "alex")
+let name = sprites.readDataString(mySprite, "name")
+```
+
+
+## Use this extension
+
+This repository can be added as an **extension** in MakeCode.
+
+* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
+* click on **New Project**
+* click on **Extensions** under the gearwheel menu
+* search for **https://github.com/microsoft/arcade-sprite-data** and import
+
+## Edit this extension ![Build status badge](https://github.com/microsoft/arcade-sprite-data/workflows/MakeCode/badge.svg)
+
+To edit this repository in MakeCode.
+
+* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
+* click on **Import** then click on **Import URL**
+* paste **https://github.com/microsoft/arcade-sprite-data** and click import
 
 # Contributing
 

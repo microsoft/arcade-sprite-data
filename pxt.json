@@ -7,7 +7,6 @@
         "CODE_OF_CONDUCT.md",
         "README.md",
         "SECURITY.md",
-        "main.blocks",
         "main.ts"
     ],
     "testFiles": [
@@ -16,5 +15,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
