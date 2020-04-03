@@ -1,7 +1,7 @@
 {
     "name": "arcade-sprite-data",
     "dependencies": {
-        "device": "*"
+        "game": "*"
     },
     "files": [
         "CODE_OF_CONDUCT.md",
@@ -12,6 +12,9 @@
     "testFiles": [
         "test.ts"
     ],
+    "testDependencies": {
+        "device": "*"
+    },
     "supportedTargets": [
         "arcade"
     ],
