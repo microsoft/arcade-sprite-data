@@ -1,5 +1,6 @@
 {
     "name": "arcade-sprite-data",
+    "version": "0.0.1",
     "dependencies": {
         "game": "*"
     },
