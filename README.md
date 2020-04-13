@@ -26,6 +26,14 @@ sprites.setDataString(mySprite, "name", "alex")
 let name = sprites.readDataString(mySprite, "name")
 ```
 
+* Storing booleans
+
+```blocks
+let mySprite = sprites.create(sprites.food.smallApple, SpriteKind.Player)
+sprites.setDataBoolean(mySprite, "sleepy", false)
+let sleepy = sprites.readDataBoolean(mySprite, "sleepy")
+```
+
 
 ## Use this extension
 
