@@ -74,7 +74,7 @@ namespace sprites {
     export function setDataBoolean(sprite: Sprite, name: string, value: boolean) {
         if (!sprite || !name) return;
         const d = sprite.data();
-        d[name] = value;
+        d[name] = !!value;
     }
 
     /**
