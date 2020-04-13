@@ -63,4 +63,30 @@ namespace sprites {
         const d = sprite.data();
         return d[name] as string;
     }
+
+    /**
+     * Sets a boolean in the data of a sprite
+     */
+    //% blockId=spriteDataSetBoolean block="set $sprite=variables_get data $name to boolean $value"
+    //% group="Data"
+    //% weight=10
+    //% blockGap=8
+    export function setDataBoolean(sprite: Sprite, name: string, value: boolean) {
+        if (!sprite || !name) return;
+        const d = sprite.data();
+        d[name] = value;
+    }
+
+    /**
+     * Gets a boolean in the data of a sprite
+     */
+    //% blockId=spriteDataGetBoolean block="$sprite=variables_get data $name as boolean"
+    //% group="Data"
+    //% weight=10
+    //% blockGap=8
+    export function readDataBoolean(sprite: Sprite, name: string): boolean {
+        if (!sprite || !name) return false;
+        const d = sprite.data();
+        return !!d[name];
+    }
 }
