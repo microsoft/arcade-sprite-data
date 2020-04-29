@@ -89,4 +89,31 @@ namespace sprites {
         const d = sprite.data();
         return !!d[name];
     }
+
+    /**
+     * Sets a sprite in the data of a sprite
+     */
+    //% blockId=spriteDataSetSprite block="set $sprite=variables_get data $name to sprite $value"
+    //% group="Data"
+    //% weight=10
+    //% blockGap=8
+    export function setDataSprite(sprite: Sprite, name: string, value: Sprite) {
+        if (!sprite || !name) return;
+        const d = sprite.data();
+        d[name] = value;
+    }
+
+    /**
+     * Gets a sprite in the data of a sprite
+     */
+    //% blockId=spriteDataGetSprite block="$sprite=variables_get data $name as sprite"
+    //% group="Data"
+    //% weight=10
+    //% blockGap=8
+    export function readDataSprite(sprite: Sprite, name: string): Sprite {
+        if (!sprite || !name) return undefined;
+        const d = sprite.data();
+        return d[name] as Sprite;
+    }
+
 }
