@@ -34,6 +34,15 @@ sprites.setDataBoolean(mySprite, "sleepy", false)
 let sleepy = sprites.readDataBoolean(mySprite, "sleepy")
 ```
 
+* Storing sprites
+
+* Storing images
+
+```blocks
+let mySprite = sprites.create(sprites.food.smallApple, SpriteKind.Player)
+sprites.setDataImage(mySprite, "flipped", sprites.vehicle.carBlueBack)
+let altImage = sprites.readDataImage(mySprite, "flipped")
+```
 
 ## Use this extension
 
