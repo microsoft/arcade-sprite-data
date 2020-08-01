@@ -83,5 +83,5 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 #### Metadata (used for search, rendering)
 
 * for PXT/arcade
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}#0.1.0");</script>
 
