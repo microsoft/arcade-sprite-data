@@ -36,6 +36,11 @@ let sleepy = sprites.readDataBoolean(mySprite, "sleepy")
 
 * Storing sprites
 
+```blocks
+let alex = sprites.create(sprites.duck.duck1, SpriteKind.Player)
+let steve = sprites.create(sprites.food.smallBurger, SpriteKind.Food)
+sprites.setDataSprite(steve, "other", alex)
+```
 * Storing images
 
 ```blocks
