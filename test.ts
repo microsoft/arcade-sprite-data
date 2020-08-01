@@ -26,7 +26,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite: Sprite, 
 
     const otherImage = sprites.readDataImage(sprite, "flipped")
     if (otherImage) {
-        sprites.setDataImage(sprite, "flipped", sprite.image())
+        sprites.setDataImage(sprite, "flipped", sprite.image)
         sprite.setImage(otherImage)
     }
 })
