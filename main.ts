@@ -118,13 +118,28 @@ namespace sprites {
 
 
     /**
-     * Sets a sprite in the data of a sprite
+     * Sets an Image in the data of a sprite.
+     * Deprecated. Use setDataImageValue instead
      */
     //% blockId=spriteDataSetImage block="set $sprite=variables_get data $name to image $value"
     //% group="Data"
+    //% deprecated=1
     //% weight=9
     //% blockGap=8
     export function setDataImage(sprite: Sprite, name: string, value: Image) {
+        setDataImageValue(sprite, name, value);
+    }
+
+    /**
+     * Sets an Image in the data of a sprite
+     */
+    //% blockId=spriteDataSetImageValue block="set $sprite data $name to image $value"
+    //% group="Data"
+    //% sprite.shadow=variables_get
+    //% value.shadow=screen_image_picker
+    //% weight=9
+    //% blockGap=8
+    export function setDataImageValue(sprite: Sprite, name: string, value: Image) {
         if (!sprite || !name) return;
         const d = sprite.data;
         d[name] = value;
