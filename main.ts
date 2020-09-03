@@ -133,8 +133,9 @@ namespace sprites {
     /**
      * Sets an Image in the data of a sprite
      */
-    //% blockId=spriteDataSetImageValue block="set $sprite=variables_get data $name to image $value"
+    //% blockId=spriteDataSetImageValue block="set $sprite data $name to image $value"
     //% group="Data"
+    //% sprite.shadow=variables_get
     //% value.shadow=screen_image_picker
     //% weight=9
     //% blockGap=8
