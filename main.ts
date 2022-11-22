@@ -3,6 +3,7 @@ namespace sprites {
      * Sets a number in the data of a sprite
      */
     //% blockId=spriteDataSetNumber block="set $sprite=variables_get data $name to number $value"
+    //% name.shadow="spriteDataNumberNameShadow"
     //% group="Data"
     //% weight=10
     //% blockGap=8
@@ -16,6 +17,7 @@ namespace sprites {
      * Change a number in the data of a sprite by a given value
      */
     //% blockId=spriteDataChangeNumber block="change $sprite=variables_get data $name by number $value"
+    //% name.shadow="spriteDataNumberNameShadow"
     //% group="Data"
     //% weight=10
     //% blockGap=8
@@ -29,6 +31,7 @@ namespace sprites {
      * Gets a number in the data of a sprite
      */
     //% blockId=spriteDataGetNumber block="$sprite=variables_get data $name as number"
+    //% name.shadow="spriteDataNumberNameShadow"
     //% group="Data"
     //% weight=10
     //% blockGap=8
@@ -42,6 +45,7 @@ namespace sprites {
      * Sets a string in the data of a sprite
      */
     //% blockId=spriteDataSetString block="set $sprite=variables_get data $name to string $value"
+    //% name.shadow="spriteDataStringNameShadow"
     //% group="Data"
     //% weight=10
     //% blockGap=8
@@ -55,6 +59,7 @@ namespace sprites {
      * Gets a number in the data of a sprite
      */
     //% blockId=spriteDataGetString block="$sprite=variables_get data $name as string"
+    //% name.shadow="spriteDataStringNameShadow"
     //% group="Data"
     //% weight=10
     //% blockGap=8
@@ -68,6 +73,7 @@ namespace sprites {
      * Sets a boolean in the data of a sprite
      */
     //% blockId=spriteDataSetBoolean block="set $sprite=variables_get data $name to boolean $value"
+    //% name.shadow="spriteDataBooleanNameShadow"
     //% group="Data"
     //% weight=10
     //% blockGap=8
@@ -81,6 +87,7 @@ namespace sprites {
      * Gets a boolean in the data of a sprite
      */
     //% blockId=spriteDataGetBoolean block="$sprite=variables_get data $name as boolean"
+    //% name.shadow="spriteDataBooleanNameShadow"
     //% group="Data"
     //% weight=10
     //% blockGap=8
@@ -94,6 +101,7 @@ namespace sprites {
      * Sets a sprite in the data of a sprite
      */
     //% blockId=spriteDataSetSprite block="set $sprite=variables_get data $name to sprite $value"
+    //% name.shadow="spriteDataSpriteNameShadow"
     //% group="Data"
     //% weight=10
     //% blockGap=8
@@ -107,6 +115,7 @@ namespace sprites {
      * Gets a sprite in the data of a sprite
      */
     //% blockId=spriteDataGetSprite block="$sprite=variables_get data $name as sprite"
+    //% name.shadow="spriteDataSpriteNameShadow"
     //% group="Data"
     //% weight=10
     //% blockGap=8
@@ -122,6 +131,7 @@ namespace sprites {
      * Deprecated. Use setDataImageValue instead
      */
     //% blockId=spriteDataSetImage block="set $sprite=variables_get data $name to image $value"
+    //% name.shadow="spriteDataImageNameShadow"
     //% group="Data"
     //% deprecated=1
     //% weight=9
@@ -134,6 +144,7 @@ namespace sprites {
      * Sets an Image in the data of a sprite
      */
     //% blockId=spriteDataSetImageValue block="set $sprite data $name to image $value"
+    //% name.shadow="spriteDataImageNameShadow"
     //% group="Data"
     //% sprite.shadow=variables_get
     //% value.shadow=screen_image_picker
@@ -149,6 +160,7 @@ namespace sprites {
      * Gets a sprite in the data of a sprite
      */
     //% blockId=spriteDataGetImage block="$sprite=variables_get data $name as image"
+    //% name.shadow="spriteDataImageNameShadow"
     //% group="Data"
     //% weight=9
     //% blockGap=8
@@ -156,5 +168,51 @@ namespace sprites {
         if (!sprite || !name) return undefined;
         const d = sprite.data;
         return d[name] as Image;
+    }
+
+
+    //% block="$name"
+    //% blockId=spriteDataNumberNameShadow
+    //% blockHidden=true shim=TD_ID
+    //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
+    //% name.fieldOptions.key="spritedatanumber"
+    export function _numberNameShadow(name: string) {
+        return name
+    }
+
+    //% block="$name"
+    //% blockId=spriteDataSpriteNameShadow
+    //% blockHidden=true shim=TD_ID
+    //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
+    //% name.fieldOptions.key="spritedatasprite"
+    export function _spriteNameShadow(name: string) {
+        return name
+    }
+
+    //% block="$name"
+    //% blockId=spriteDataBooleanNameShadow
+    //% blockHidden=true shim=TD_ID
+    //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
+    //% name.fieldOptions.key="spritedataboolean"
+    export function _booleanNameShadow(name: string) {
+        return name
+    }
+
+    //% block="$name"
+    //% blockId=spriteDataStringNameShadow
+    //% blockHidden=true shim=TD_ID
+    //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
+    //% name.fieldOptions.key="spritedatastring"
+    export function _stringNameShadow(name: string) {
+        return name
+    }
+
+    //% block="$name"
+    //% blockId=spriteDataImageNameShadow
+    //% blockHidden=true shim=TD_ID
+    //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
+    //% name.fieldOptions.key="spritedataimage"
+    export function _imageNameShadow(name: string) {
+        return name
     }
 }
